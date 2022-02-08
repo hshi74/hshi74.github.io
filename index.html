@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
-  <link rel="icon" type="image/png" href="images/seal_icon.png">
+  <!-- <link rel="icon" type="image/png" href="images/icon.png"> -->
 </head>
 
 <body>
@@ -17,16 +17,16 @@
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
           <tr style="padding:0px">
             <td style="padding:2.5%;width:67%;vertical-align:middle">
-              <p style="text-align:center">
+              <p style="padding-bottom:10px;text-align:center">
                 <name>Haochen Shi</name>
               </p>
               <p>
                 I'm a first year Master of Computer Science student at Stanford University, where I work with <a href="https://jiajunwu.com/">Jiajun Wu</a> 
-                and <a href="http://hxu.rocks/">Huazhe Xu</a> on robotics and computer vision. During my undergraduate at UW-Madison, I worked with 
-                <a href="https://gleicher.sites.cs.wisc.edu/">Michael Gleicher</a> on robotics.
+                and <a href="http://hxu.rocks/">Huazhe Xu</a> on robotics and computer vision. I worked with 
+                <a href="https://gleicher.sites.cs.wisc.edu/">Michael Gleicher</a> on robotics during my undergraduate at UW-Madison.
               </p>
               <p>
-                My research interests include computer vision, robotics, and potentially more! 
+                My research interests include robotics, computer vision, and potentially more! 
                 In my leisure time, I love playing tennis, Go, video games, and watching anime. 
                 I'm actively applying to PhD programs in 2022 Fall!
               </p>
@@ -56,27 +56,27 @@
         </tbody></table>
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
-          <tr onmouseout="mip360_stop()" onmouseover="mip360_start()">
+          <tr onmouseout="cik_stop()" onmouseover="cik_start()">
             <td style="padding: 20px 0 20px 40px;width:25%;vertical-align:middle">
               <div class="one">
-                <div class="two" id='mip360_image'><video  width=100% height=100% muted autoplay loop>
-                <source src="images/mip360_sat.mp4" type="video/mp4">
+                <div class="two" id='cik_image'><video  width=100% height=100% muted autoplay loop>
+                <source src="images/cik.mp4" type="video/mp4">
                 Your browser does not support the video tag.
                 </video></div>
-                <img src='images/mip360_sat.jpg' width="160">
+                <img src='images/cik.jpg' width="160">
               </div>
               <script type="text/javascript">
-                function mip360_start() {
-                  document.getElementById('mip360_image').style.opacity = "1";
+                function cik_start() {
+                  document.getElementById('cik_image').style.opacity = "1";
                 }
 
-                function mip360_stop() {
-                  document.getElementById('mip360_image').style.opacity = "0";
+                function cik_stop() {
+                  document.getElementById('cik_image').style.opacity = "0";
                 }
-                mip360_stop()
+                cik_stop()
               </script>
             </td>
-            <td style="padding:20px;width:75%;vertical-align:middle">
+            <td style="padding: 20px 20px 20px 0px;width:75%;vertical-align:middle">
               <a href="https://ieeexplore.ieee.org/abstract/document/9561505">
                 <papertitle>CollisionIK: A per-instant pose optimization method for generating robot motions with environment collision avoidance</papertitle>
               </a>
@@ -203,10 +203,7 @@
             <td style="padding:0px">
               <br>
               <p style="text-align:right;font-size:small;">
-                Feel free to steal this website's <a href="https://github.com/jonbarron/jonbarron_website">source code</a>,
-                just add a link back to my website.
-                <strong>Do not</strong> scrape the HTML from the deployed instance of this website at http://jonbarron.info,
-                as it includes analytics tags that you do not want on your own website &mdash; use the github code instead.
+                Template from <a href="https://jonbarron.info/">Jon Barron's website</a>
               </p>
             </td>
           </tr>
