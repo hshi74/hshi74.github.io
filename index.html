@@ -63,6 +63,59 @@
         </tbody></table>
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
+          <tr onmouseout="robocraft_stop()" onmouseover="robocraft_start()">
+            <td style="padding: 20px 10px 20px 20px;width:25%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='robocraft_image'><video  width=100% height=100% muted autoplay loop>
+                <source src="images/robocraft.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+                </video></div>
+                <img src='images/robocraft.jpg' width="160">
+              </div>
+              <script type="text/javascript">
+                function robocraft_start() {
+                  document.getElementById('robocraft_image').style.opacity = "1";
+                }
+
+                function robocraft_stop() {
+                  document.getElementById('robocraft_image').style.opacity = "0";
+                }
+                robocraft_stop()
+              </script>
+            </td>
+            <td style="padding: 20px 20px 20px 10px;width:75%;vertical-align:middle">
+              <!-- <a href="https://ieeexplore.ieee.org/abstract/document/9561505"> -->
+              <papertitle>RoboCraft: Learning to See, Simulate, and Shape Elasto-Plastic Objects with Graph Networks</papertitle>
+              <!-- </a> -->
+              <br>
+              <strong>Haochen Shi*</strong>,
+              <a href="http://hxu.rocks/">Huazhe Xu*</a>,
+              <a href="https://sites.google.com/view/zhiao-huang/">Zhiao Huang</a>,
+              <a href="https://people.csail.mit.edu/liyunzhu/">Yunzhu Li</a>,
+              <a href="https://jiajunwu.com/">Jiajun Wu</a>
+              <br>
+							<em>RSS</em>, 2022
+              <br>
+              Abridged in ICRA 2022 workshop on Representing and Manipulating Deformable Objects
+              <br>
+              <a href="http://hxu.rocks/robocraft/">[project page]</a>
+              <a href="https://arxiv.org/abs/2205.02909">[arXiv]</a>
+              <a href="https://github.com/hshi74/RoboCraft">[code]</a>
+              <!-- <a href="https://youtu.be/rdMl1gOPNoM">[video]</a> -->
+              <p></p>
+              <p>
+                Modeling and manipulating elasto-plastic objects are essential capabilities 
+                for robots to perform complex industrial and household interaction tasks 
+                (e.g., stuffing dumplings, rolling sushi, and making pottery). However, 
+                due to the high degree of freedom of elasto-plastic objects, significant 
+                challenges exist in virtually every aspect of the robotic manipulation pipeline, 
+                e.g., representing the states, modeling the dynamics, and synthesizing 
+                the control signals. We propose to tackle these challenges by employing a 
+                particle-based representation for elasto-plastic objects in a model-based planning framework.
+              </p>
+            </td>
+          </tr> 
+
           <tr onmouseout="cik_stop()" onmouseover="cik_start()">
             <td style="padding: 20px 10px 20px 20px;width:25%;vertical-align:middle">
               <div class="one">
@@ -98,61 +151,12 @@
               <!-- <a href="http://jonbarron.info/mipnerf360">[project page]</a> -->
               <a href="https://arxiv.org/abs/2102.13187">[arXiv]</a>
               <a href="https://youtu.be/rdMl1gOPNoM">[video]</a>
+              <a href="https://github.com/uwgraphics/relaxed_ik_core">[code]</a>
               <p></p>
               <p>
                 In this work, we present a per-instant pose optimization method that can generate configurations that 
                 achieve specified pose or motion objectives as best as possible over a sequence of solutions, 
                 while also simultaneously avoiding collisions with static or dynamic obstacles in the environment.
-              </p>
-            </td>
-          </tr> 
-
-          <tr onmouseout="robocraft_stop()" onmouseover="robocraft_start()">
-            <td style="padding: 20px 10px 20px 20px;width:25%;vertical-align:middle">
-              <div class="one">
-                <div class="two" id='robocraft_image'><video  width=100% height=100% muted autoplay loop>
-                <source src="images/robocraft.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-                </video></div>
-                <img src='images/robocraft.jpg' width="160">
-              </div>
-              <script type="text/javascript">
-                function robocraft_start() {
-                  document.getElementById('robocraft_image').style.opacity = "1";
-                }
-
-                function robocraft_stop() {
-                  document.getElementById('robocraft_image').style.opacity = "0";
-                }
-                robocraft_stop()
-              </script>
-            </td>
-            <td style="padding: 20px 20px 20px 10px;width:75%;vertical-align:middle">
-              <!-- <a href="https://ieeexplore.ieee.org/abstract/document/9561505"> -->
-              <papertitle>RoboCraft: Learning to See, Simulate, and Shape Elasto-Plastic Objects with Graph Networks</papertitle>
-              <!-- </a> -->
-              <br>
-              <strong>Haochen Shi*</strong>,
-              <a href="http://hxu.rocks/">Huazhe Xu*</a>,
-              <a href="https://sites.google.com/view/zhiao-huang/">Zhiao Huang</a>,
-              <a href="https://people.csail.mit.edu/liyunzhu/">Yunzhu Li</a>,
-              <a href="https://jiajunwu.com/">Jiajun Wu</a>
-              <br>
-							<em>RSS</em>, 2022
-              <br>
-              <a href="https://arxiv.org/abs/2205.02909">[arXiv]</a>
-              <a href="http://hxu.rocks/robocraft/">[project page]</a>
-              <!-- <a href="https://youtu.be/rdMl1gOPNoM">[video]</a> -->
-              <p></p>
-              <p>
-                Modeling and manipulating elasto-plastic objects are essential capabilities 
-                for robots to perform complex industrial and household interaction tasks 
-                (e.g., stuffing dumplings, rolling sushi, and making pottery). However, 
-                due to the high degree of freedom of elasto-plastic objects, significant 
-                challenges exist in virtually every aspect of the robotic manipulation pipeline, 
-                e.g., representing the states, modeling the dynamics, and synthesizing 
-                the control signals. We propose to tackle these challenges by employing a 
-                particle-based representation for elasto-plastic objects in a model-based planning framework.
               </p>
             </td>
           </tr> 
