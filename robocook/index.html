@@ -1,0 +1,398 @@
+<!-- saved from url=(0053)https://georgecazenavette.github.io/mtt-distillation/ -->
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script src="./robocook/jsapi" type="text/javascript"></script>
+
+    <link rel="stylesheet" type="text/css" href="robocook.css">
+    <script type="text/javascript">google.load("jquery", "1.3.2");</script>
+
+    <title>RoboCook: Long-Horizon Elasto-Plastic Object Manipulation with Diverse Tools</title>
+    <meta property="og:image" content="resources/teaser.png">
+    <!-- Facebook automatically scrapes this. Go to https://developers.facebook.com/tools/debug/ if you update and want to force Facebook to rescrape. -->
+    <meta property="og:title" content="RoboCook: Long-Horizon Elasto-Plastic Object Manipulation with Diverse Tools">
+    <meta property="og:description"
+        content="RoboCook: Long-Horizon Elasto-Plastic Object Manipulation with Diverse Tools">
+
+    <!-- Get from Google Analytics -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!--<script async="" src="https://georgecazenavette.github.io/mtt-distillation/"></script> -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-75863369-6');
+    </script>
+</head>
+
+<body data-new-gr-c-s-check-loaded="14.1057.0" data-gr-ext-installed="">
+    <br>
+    <center>
+        <h1>RoboCook: Long-Horizon Elasto-Plastic Object Manipulation with Diverse Tools</h1>
+        <!-- <table align="center" width="600px">
+        </table> -->
+        <table align="center" class="spacing">
+            <tbody>
+                <tr>
+                    <td align="center">
+                        <center>
+                            <span style="font-size:20px"><a href="https://hshi74.github.io/">Haochen
+                                    Shi</a><sup>1*</sup></span>
+                        </center>
+                    </td>
+                    <td width="36">
+                    </td>
+                    <td align="center">
+                        <center>
+                            <span style="font-size:20px"><a href="http://hxu.rocks/">Huazhe Xu</a><sup>2*</sup></span>
+                        </center>
+                    </td>
+                    <td width="36">
+                    </td>
+                    <td align="center">
+                        <center>
+                            <span style="font-size:20px"><a href="https://samuelpclarke.com/">Samuel
+                                    Clarke</a><sup>1</sup></span>
+                        </center>
+                    </td>
+                    <td width="36">
+                    </td>
+                    <td align="center">
+                        <center>
+                            <span style="font-size:20px"><a href="https://yunzhuli.github.io/">Yunzhu
+                                    Li</a><sup>1</sup></span>
+                        </center>
+                    </td>
+                    <td width="36">
+                    </td>
+                    <td align="center">
+                        <center>
+                            <span style="font-size:20px"><a href="https://jiajunwu.com/">Jiajun
+                                    Wu</a><sup>1</sup></span>
+                        </center>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table align="center" class="spacing">
+            <tbody>
+                <tr>
+                    <td align="center">
+                        <center>
+                            <span style="font-size:18px"><sup>1</sup>Stanford University</span>
+                        </center>
+                    </td>
+                    <td width="36">
+                    </td>
+                    <td align="center">
+                        <center>
+                            <span style="font-size:18px"><sup>2</sup>Tsinghua University, IIIS</span>
+                        </center>
+                    </td>
+                    <td width="36">
+                    </td>
+                    <td align="center">
+                        <center>
+                            <span style="font-size:18px"><sup>*</sup>Equal contribution</span>
+                        </center>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- <br>
+        <center>
+            <span style="font-size:20px">RSS 2022</span>
+        </center>
+        <br> -->
+
+        <table align="center" width="250px" class="spacing">
+            <tbody>
+                <tr>
+                    <td align="center" width="120px">
+                        <center>
+                            <a href="https://arxiv.org/pdf/2205.02909.pdf"
+                                style="color: royalblue; font-size: 18px;">[Paper]</a>
+                        </center>
+                    </td>
+                    <td align="center" width="120px">
+                        <center>
+                            <a href="https://github.com/hshi74/RoboCraft"
+                                style="color: royalblue; font-size: 18px;">[Code]</a>
+                        </center>
+                    </td>
+                    <td align="center" width="120px">
+                        <center>
+                            <a href="https://hxu.rocks/robocraft/bibtex.txt"
+                                style="color: royalblue; font-size: 18px;">[Bibtex]</a>
+                        </center>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </center>
+    <center>
+        <table align="center" width="1000px">
+            <tbody>
+                <tr>
+                    <td width="260px">
+                        <center>
+                            <img class="round" src="./robocraft/teaser_3row.png" style="width:1000px">
+                        </center>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </center>
+    <hr>
+    <center>
+        <h2>Abstract</h2>
+    </center>
+    <p>Humans excel in complex long-horizon soft body manipulation tasks via flexible tool use: bread baking requires a
+        knife to slice the dough and a rolling pin to flatten it. Often regarded as a hallmark of human cognition, tool
+        use in autonomous robots remains limited due to challenges in understanding tool-object interactions. Here we
+        develop an intelligent robotic system, RoboCook, which perceives, models, and manipulates elasto-plastic objects
+        with various tools. RoboCook uses point cloud scene representations, models tool-object interactions with Graph
+        Neural Networks (GNNs), and combines tool classification with self-supervised policy learning to devise
+        manipulation plans. We demonstrate that from just 20 minutes of real-world interaction data per tool, a
+        general-purpose robot arm can learn complex long-horizon soft object manipulation tasks, such as making
+        dumplings and alphabet letter cookies. Extensive evaluations show that RoboCook substantially outperforms
+        state-of-the-art approaches, exhibits robustness against severe external disturbances, and demonstrates
+        adaptability to different materials.
+    </p>
+    <hr>
+    <h2 align="center">Full Video</h2>
+    <table align="center" width="1000px">
+
+        <tbody>
+            <tr>
+                <td align="center" width="1000px">
+                    <center>
+                        <video width="1000" height="600" controls>
+                            <source src="./robocraft/RoboCraft_video_camera_ready.mp4" type="video/mp4">
+                            <!--<source src="movie.ogg" type="video/ogg">-->
+                            <!--Your browser does not support the video tag.-->
+                        </video>
+                        <!--<iframe height="600" width="1000" src="./robocraft/RoboCraft_video_camera_ready.mp4" frameborder="0" allowfullscreen="true" content-type="text/html"></iframe>-->
+                        <!--</iframe>-->
+                        <!--<iframe  src="./robocraft/RoboCraft_video_camera_ready" width="600">-->
+
+                    </center>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+
+    <center>
+        <h2>Setup</h2>
+    </center>
+    <table align="center" width="200px">
+        <tbody>
+            <tr>
+                <td align="center" width="200px">
+                    <img class="round" style="width:600" src="./robocraft/setup.png">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <hr>
+    <center>
+        <h2>Framework</h2>
+    </center>
+    <table align="center" width="400px">
+        <tbody>
+            <tr>
+                <td align="center" width="400px">
+                    <center>
+                        <img class="round" style="height:600" src="./robocraft/framework.png">
+                    </center>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+
+    Our framework RoboCraft consists of three components. The first is a particle-based scene representation module that
+    learns to ''see'' the plasticine.
+    The second is a GNN-based model that ''simulates'' the object's dynamics. The third is a gradient- and
+    sampling-based model predictive control module that
+    learns to ''shape'' the plasticine.
+    <hr>
+
+    <h2 align="center">Simulation Results</h2>
+    <table align="center" width="400px">
+
+        <tbody>
+            <tr>
+                <td align="center" width="400px">
+                    <center>
+
+                        <img src="./robocraft/teaser_1.png" width="600">
+
+                    </center>
+                </td>
+            </tr>
+            <tr>
+                <td align="center" width="400px">
+                    <center>
+                        <br>
+                        <p style="font-size:18px">RoboCraft shaping results in simulation.</p>
+                    </center>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <!--<h2 align="center">Results on Alphabetical Letters</h2>-->
+    <!--<table align="center" width="400px">-->
+
+    <!--<tbody><tr>-->
+    <!--<td align="center" width="400px">-->
+    <!--<center>-->
+    <!--<img src="./robocraft/alphabet.gif" width="600">-->
+    <!--</center>-->
+    <!--</td>-->
+    <!--</tr>-->
+    <!--</tbody></table>-->
+
+
+    <hr>
+    <h2 align="center">Results on a Real Robot</h2>
+    <table align="center">
+        <tbody>
+            <tr>
+                <td align="center">
+                    <img src="./robocraft/A.gif" width="500">
+                </td>
+                <td align="center">
+                    <img src="./robocraft/X.gif" width="500">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table align="center" width="400px">
+
+        <tbody>
+            <tr>
+                <td align="center" width="400px">
+                    <center>
+                        <img src="./robocraft/others.gif" width="600">
+                    </center>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    <h2 align="center">Human Comparisons</h2>
+    <table align="center">
+        <tbody>
+            <tr>
+                <td align="center">
+                    <img src="./robocraft/human_sim.gif" width="500">
+                </td>
+                <td align="center">
+                    <img src="./robocraft/human_real.gif" width="500">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table align="center" width="400px">
+
+        <tbody>
+            <tr>
+                <td align="center" width="400px">
+                    <center>
+                        <img src="./robocraft/compare.png" width="600">
+                    </center>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+
+    We compare RoboCraft with human subjects in both simulation and real-world experiments. In the simulator, human
+    subjects control the gripper using a mouse-keyboard setup. In the real world, human subjects control the robot arm
+    directly with robot human guiding mode. We find that RoboCraft can achieve better or comparable performance.
+    <hr>
+
+
+
+    <center>
+        <h2>Paper</h2>
+    </center>
+    <table align="center">
+
+        <tbody>
+            <tr>
+                <td><a href=""><img class="layered-paper-big" style="height:175px" src="./robocraft/paper.png"></a></td>
+                <td><span style="font-size:14pt">H. Shi<sup>*</sup>, H. Xu<sup>*</sup>, Z. Huang, Y. Li, J. Wu<br>
+                        <b>RoboCraft: Learning to See, Simulate, and Shape Elasto-Plastic Objects with Graph
+                            Networks</b><br>
+                        RSS, 2022.<br></span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+
+
+    <hr>
+    <br>
+
+    <table align="center" width="1000">
+        <tbody>
+            <tr>
+                <td>
+                    <h3>Related Work</h3>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <ol>
+                        <li>
+                            Li et al. <a href="http://visual-physics-grounding.csail.mit.edu/">"Visual Grounding of
+                                Learned Physical Models"</a>, in ICML 2020
+                        </li>
+                        <li>
+                            Huang et al. <a href="http://plasticinelab.csail.mit.edu/">"PlasticineLab: A Soft-Body
+                                Manipulation Benchmark with Differentiable Physics"</a>, in ICLR 2021
+                        </li>
+                        <li>Chen et al. <a href="https://arxiv.org/pdf/2107.06924.pdf">"Deformable Elasto-Plastic Object
+                                Shaping using an
+                                Elastic Hand and Model-Based Reinforcement Learning"</a>, in IROS 2021
+                        </li>
+
+                    </ol>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    <table align="center" width="1000px">
+        <tbody>
+            <tr>
+                <td width="400px">
+                    <left>
+                        <center>
+                            <h2>Acknowledgements</h2>
+                        </center>
+                        We would thank <a href="https://samuelpclarke.com/">Samuel Clark</a> for discussion.
+                        This template was originally made by <a href="http://web.mit.edu/phillipi/">Phillip Isola</a>
+                        and <a href="http://richzhang.github.io/">Richard Zhang</a> for a <a
+                            href="http://richzhang.github.io/colorization/">colorful</a> ECCV project; the code can be
+                        found <a href="https://github.com/richzhang/webpage-template">here</a>.
+                    </left>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+
+
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration>
+
+</html>
