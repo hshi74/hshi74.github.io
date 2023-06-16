@@ -134,12 +134,12 @@
 
     </center>
     <center>
-        <table align="center" width="1000px">
+        <table align="center" class="spacing">
             <tbody>
                 <tr>
-                    <td width="260px">
+                    <td>
                         <center>
-                            <img class="round" src="./robocraft/teaser_3row.png" style="width:1000px">
+                            <img class=" round" src="./figures/teaser.png" style="width:740px">
                         </center>
                     </td>
                 </tr>
@@ -147,9 +147,7 @@
         </table>
     </center>
     <hr>
-    <center>
-        <h2>Abstract</h2>
-    </center>
+    <h2>Abstract</h2>
     <p>Humans excel in complex long-horizon soft body manipulation tasks via flexible tool use: bread baking requires a
         knife to slice the dough and a rolling pin to flatten it. Often regarded as a hallmark of human cognition, tool
         use in autonomous robots remains limited due to challenges in understanding tool-object interactions. Here we
@@ -163,162 +161,202 @@
         adaptability to different materials.
     </p>
     <hr>
-    <h2 align="center">Full Video</h2>
+    <h2>Videos</h2>
     <table align="center" width="1000px">
 
         <tbody>
             <tr>
                 <td align="center" width="1000px">
                     <center>
-                        <video width="1000" height="600" controls>
-                            <source src="./robocraft/RoboCraft_video_camera_ready.mp4" type="video/mp4">
-                            <!--<source src="movie.ogg" type="video/ogg">-->
-                            <!--Your browser does not support the video tag.-->
-                        </video>
-                        <!--<iframe height="600" width="1000" src="./robocraft/RoboCraft_video_camera_ready.mp4" frameborder="0" allowfullscreen="true" content-type="text/html"></iframe>-->
-                        <!--</iframe>-->
-                        <!--<iframe  src="./robocraft/RoboCraft_video_camera_ready" width="600">-->
-
+                        <p><b>Video 1:</b> This video shows the results of making a dumpling and alphabet
+                            letter cookies with the
+                            RoboCook framework.</p>
+                        <iframe width="1000" height="563" src="https://youtube.com/embed/4HOGJAXokMg"
+                            title="RoboCook: Manipulation Results" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
                     </center>
                 </td>
             </tr>
-        </tbody>
-    </table>
-    <hr>
-
-    <center>
-        <h2>Setup</h2>
-    </center>
-    <table align="center" width="200px">
-        <tbody>
             <tr>
-                <td align="center" width="200px">
-                    <img class="round" style="width:600" src="./robocraft/setup.png">
-                </td>
-            </tr>
-        </tbody>
-    </table>
-
-    <hr>
-    <center>
-        <h2>Framework</h2>
-    </center>
-    <table align="center" width="400px">
-        <tbody>
-            <tr>
-                <td align="center" width="400px">
+                <td align="center" width="1000px">
                     <center>
-                        <img class="round" style="height:600" src="./robocraft/framework.png">
+                        <p style="padding-top: 30px;"><b>Video 2:</b> This video demonstrates the robustness of the
+                            RoboCook framework by applying external human perturbations during real-time execution.
+                            The highlight happens at <i><b>01:43</b></i>. The human messes everything up and puts the
+                            excess dough back into a very irregular shape. The robot starts again from the beginning,
+                            demonstrating the robustness of the RoboCook framework in the face of heavy disturbance.
+                        </p>
+                        <iframe width="1000" height="563" src="https://youtube.com/embed/rpfxhkh1nS4"
+                            title="RoboCook: Dumpling Making Under Human Perturbation" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                    </center>
+                </td>
+            </tr>
+            <tr>
+                <td align="center" width="1000px">
+                    <center>
+                        <p style="padding-top: 30px;"><b>Video 3:</b> The video presents a failure mode of the RoboCook
+                            framework when making a dumpling.
+                        </p>
+                        <iframe width="1000" height="563" src="https://youtube.com/embed/1cNihskMFZ4"
+                            title="RoboCook: Failure Case" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                    </center>
+                </td>
+            </tr>
+            <tr>
+                <td align="center" width="1000px">
+                    <center>
+                        <p style="padding-top: 30px;"><b>Video 4:</b> The video presents the data collection process to
+                            train the dynamics model in the RoboCook framework.
+                        </p>
+                        <iframe width="1000" height="563" src="https://youtube.com/embed/VxkOF6mS90I"
+                            title="RoboCook: Data Collection" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                    </center>
+                </td>
+            </tr>
+            <tr>
+                <td align="center" width="1000px">
+                    <center>
+                        <p style="padding-top: 30px;"><b>Video 5:</b> The video shows the complete process of two human
+                            subjects making dumplings.
+                        </p>
+                        <iframe width="1000" height="563" src="https://youtube.com/embed/JoQopFp-v0Y"
+                            title="RoboCook: Comparison with Human Subjects on Dumpling Making" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
                     </center>
                 </td>
             </tr>
         </tbody>
     </table>
-    <br>
-
-    Our framework RoboCraft consists of three components. The first is a particle-based scene representation module that
-    learns to ''see'' the plasticine.
-    The second is a GNN-based model that ''simulates'' the object's dynamics. The third is a gradient- and
-    sampling-based model predictive control module that
-    learns to ''shape'' the plasticine.
     <hr>
 
-    <h2 align="center">Simulation Results</h2>
-    <table align="center" width="400px">
-
-        <tbody>
-            <tr>
-                <td align="center" width="400px">
-                    <center>
-
-                        <img src="./robocraft/teaser_1.png" width="600">
-
-                    </center>
-                </td>
-            </tr>
-            <tr>
-                <td align="center" width="400px">
-                    <center>
-                        <br>
-                        <p style="font-size:18px">RoboCraft shaping results in simulation.</p>
-                    </center>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <!--<h2 align="center">Results on Alphabetical Letters</h2>-->
-    <!--<table align="center" width="400px">-->
-
-    <!--<tbody><tr>-->
-    <!--<td align="center" width="400px">-->
-    <!--<center>-->
-    <!--<img src="./robocraft/alphabet.gif" width="600">-->
-    <!--</center>-->
-    <!--</td>-->
-    <!--</tr>-->
-    <!--</tbody></table>-->
-
-
-    <hr>
-    <h2 align="center">Results on a Real Robot</h2>
-    <table align="center">
+    <h2>Setup</h2>
+    <table align="center" class="spacing">
         <tbody>
             <tr>
                 <td align="center">
-                    <img src="./robocraft/A.gif" width="500">
-                </td>
-                <td align="center">
-                    <img src="./robocraft/X.gif" width="500">
+                    <img class="round" style="width: 1000px;" src="./figures/setup.png">
                 </td>
             </tr>
-        </tbody>
-    </table>
-    <table align="center" width="400px">
-
-        <tbody>
             <tr>
-                <td align="center" width="400px">
-                    <center>
-                        <img src="./robocraft/others.gif" width="600">
-                    </center>
+                <td align="left">
+                    <p style="padding-top: 10px;"><b>RoboCook hardware and setup:</b> Left: Robot's tabletop workspace
+                        with <i>xyz</i> coordinates at top-left. Dashed white circles: four RGB-D cameras mounted at
+                        four corners of the table. Red square: dough location and manipulation area. Dashed white
+                        square: tool racks. Right: 15 tools: (1) large roller, (2) circle press, (3) circle punch, (4)
+                        square press, (5) square punch, (6) small roller,
+                        (7) knife/pusher, (8) circle cutter, (9) hook, (10) dumpling mold, (11) two-rod symmetric
+                        gripper, (12) asymmetric gripper, (13) two-plane symmetric gripper, (14) skin spatula, (15)
+                        filling spatula.Tools are 3D-printed, representing common dough manipulation tools. The
+                        supplementary materials in the paper discusses the design principles of these 3D-printed tools.
+                    </p>
                 </td>
             </tr>
         </tbody>
     </table>
+
     <hr>
-    <h2 align="center">Human Comparisons</h2>
-    <table align="center">
+    <h2>Framework</h2>
+    <table align="center" class="spacing">
         <tbody>
             <tr>
                 <td align="center">
-                    <img src="./robocraft/human_sim.gif" width="500">
+                    <img class="round" style="width: 1000px;" src="./figures/dynamics.png">
                 </td>
+            </tr>
+            <tr>
                 <td align="center">
-                    <img src="./robocraft/human_real.gif" width="500">
+                    <img class="round" style="width: 1000px;" src="./figures/planning.png">
+                </td>
+            </tr>
+            <tr>
+                <td align="left">
+                    <p style="padding-top: 10px;"><b>(A) Perception:</b> The input to the perception module is a
+                        point cloud of the robot’s workspace captured by four RGB-D cameras. From the raw point cloud,
+                        we (a) crop the region of interest, (b) extract the dough point cloud, (c) reconstruct a
+                        watertight mesh (d) use the Signed Distance Function (SDF) to sample points inside the mesh, (e)
+                        remove points within the tools' SDF, and (f) sample 300 surface points.</p>
+                    <p><b>(B) Dynamics:</b> We process videos of each
+                        tool manipulating the dough into a particle trajectory dataset to train our GNN-based dynamics
+                        model. The model can accurately predict long-horizon state changes of the dough in gripping,
+                        pressing, and rolling tasks. On the left are the initial states' perspective, top, and side
+                        views, and on the right is a comparison of model predictions and ground truth states.</p>
+                    <p><b>(C) Closed-loop control:</b> PointNet-based classifier network identifies appropriate
+                        tools based on the current observation and the target dough configuration. The self-supervised
+                        policy network takes the tool class, the current observation, and the target dough configuration
+                        as inputs and outputs the manipulation actions. The framework closes the control loop with
+                        visual feedback.</p>
+                    <p><b>(D) Self-supervised policy learning:</b> We show the policy network architecture, the
+                        parametrized action spaces of
+                        gripping, pressing, and rolling, and how we generate the synthetic datasets to train the policy
+                        network.</p>
                 </td>
             </tr>
         </tbody>
     </table>
-    <table align="center" width="400px">
 
-        <tbody>
-            <tr>
-                <td align="center" width="400px">
-                    <center>
-                        <img src="./robocraft/compare.png" width="600">
-                    </center>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <br>
-
-    We compare RoboCraft with human subjects in both simulation and real-world experiments. In the simulator, human
-    subjects control the gripper using a mouse-keyboard setup. In the real world, human subjects control the robot arm
-    directly with robot human guiding mode. We find that RoboCraft can achieve better or comparable performance.
     <hr>
 
+    <h2>Making Dumplings</h2>
+    <table align="center" class="spacing">
+        <tbody>
+            <tr>
+                <td align="center">
+                    <img class="round" style="width: 1000px;" src="./figures/result_dumpling.png">
+                </td>
+            </tr>
+        </tbody>
+    </table>
 
+    <h2>Comparison with Human Subjects on Dumpling Making</h2>
+    <table align="center" class="spacing">
+        <tbody>
+            <tr>
+                <td align="center">
+                    <img class="round" style="width: 1000px;" src="./figures/human.png">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Making Alphabet Letter Cookies</h2>
+    <table align="center" class="spacing">
+        <tbody>
+            <tr>
+                <td align="center">
+                    <img class="round" style="width: 1000px;" src="./figures/result_letters.png">
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <img class="round" style="width: 1000px;" src="./figures/table.png">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Generalizing to Different Materials</h2>
+    <table align="center" class="spacing">
+        <tbody>
+            <tr>
+                <td align="center">
+                    <img class="round" style="width: 1000px;" src="./figures/generalization.png">
+                </td>
+            </tr>
+        </tbody>
+    </table>
 
     <center>
         <h2>Paper</h2>
@@ -337,7 +375,6 @@
         </tbody>
     </table>
     <br>
-
 
     <hr>
     <br>
@@ -379,7 +416,8 @@
                         <center>
                             <h2>Acknowledgements</h2>
                         </center>
-                        We would thank <a href="https://samuelpclarke.com/">Samuel Clark</a> for discussion.
+                        <!-- We would thank <a href="https://samuelpclarke.com/">Samuel Clark</a> for discussion. -->
+
                         This template was originally made by <a href="http://web.mit.edu/phillipi/">Phillip Isola</a>
                         and <a href="http://richzhang.github.io/">Richard Zhang</a> for a <a
                             href="http://richzhang.github.io/colorization/">colorful</a> ECCV project; the code can be
