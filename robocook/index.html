@@ -139,7 +139,7 @@
                 <tr>
                     <td>
                         <center>
-                            <img class=" round" src="./figures/teaser.png" style="width:740px">
+                            <img class=" round" src="./figures/teaser.png" style="width:1000px">
                         </center>
                     </td>
                 </tr>
@@ -317,19 +317,41 @@
                     <img class="round" style="width: 1000px;" src="./figures/result_dumpling.png">
                 </td>
             </tr>
-        </tbody>
-    </table>
-
-    <h2>Comparison with Human Subjects on Dumpling Making</h2>
-    <table align="center" class="spacing">
-        <tbody>
+            <tr>
+                <td align="left">
+                    <p style="padding-top: 10px;"><b>Making Dumplings:</b>
+                        RoboCook makes a dumpling from a piece of dough in nine steps: The robot (1) cuts the dough to
+                        an appropriate volume, (2) pinches the dough and regularizes the shape, (3) presses to flatten
+                        the dough, (4) rolls to flatten the dough further, (5) cuts a circular dumpling skin, (6)
+                        removes the excess dough, (7) picks and places the skin onto the mold, (8) adds the filling,
+                        and (9) closes and opens the mold. The black arrows denote the moving direction. </p>
+                </td>
+            </tr>
             <tr>
                 <td align="center">
-                    <img class="round" style="width: 1000px;" src="./figures/human.png">
+                    <img class="round" style="width: 1000px; padding-top: 20px;" src="./figures/human.png">
+                </td>
+            </tr>
+            <tr>
+                <td align="left">
+                    <p style="padding-top: 10px;"><b>Comparison with human subjects:</b>
+                        We show a comparison with the manipulation results of human
+                        subjects. In the first row, Human subjects devise their manipulation plan and choose tools
+                        independently. In the second row, human subjects follow a given tool sequence and subgoals.
+                    </p>
                 </td>
             </tr>
         </tbody>
     </table>
+
+    <!-- <h2>Comparison with Human Subjects on Dumpling Making</h2> -->
+    <!-- <table align="center" class="spacing">
+        <tbody>
+            
+        </tbody>
+    </table> -->
+
+    <hr>
 
     <h2>Making Alphabet Letter Cookies</h2>
     <table align="center" class="spacing">
@@ -340,25 +362,58 @@
                 </td>
             </tr>
             <tr>
-                <td align="center">
-                    <img class="round" style="width: 1000px;" src="./figures/table.png">
+                <td align="left">
+                    <p style="padding-top: 10px;"><b>Making alphabetical letter cookies:</b>
+                        We list R, O, B, C, and K shaping steps in Columns 1 to 4.
+                        Column 5 manually highlights the contour of the alphabetical letters. Columns 6 through 9
+                        compare our self-supervised learned policy with three model-based planning baselines and one RL
+                        baseline. Our method can shape the dough closer to the target than all four baseline methods.
+                        We show a comparison with the manipulation results of human
+                        subjects. In the first row, Human subjects devise their manipulation plan and choose tools
+                        independently. In the second row, human subjects follow a given tool sequence and subgoals.
+                    </p>
                 </td>
             </tr>
-        </tbody>
-    </table>
-
-    <h2>Generalizing to Different Materials</h2>
-    <table align="center" class="spacing">
-        <tbody>
+            <tr>
+                <td align="center">
+                    <img class="round" style="width: 1000px; padding-top: 20px;" src="./figures/table.png">
+                </td>
+            </tr>
+            <tr>
+                <td align="left">
+                    <p style="padding-top: 10px;"><b>Quantitative evaluations:</b>
+                        We use CD and EMD between the point clouds and the CD between the surface normals to evaluate
+                        the results. In addition to these geometrical metrics, we also ask humans to evaluate the
+                        results and compute their predicted accuracy and rank for each method averaged over the five
+                        letters. We further profile how long these methods take to plan actions. Our method outperforms
+                        all baseline methods in these metrics by a large margin.
+                    </p>
+                </td>
+            </tr>
             <tr>
                 <td align="center">
                     <img class="round" style="width: 1000px;" src="./figures/generalization.png">
                 </td>
             </tr>
+            <tr>
+                <td align="left">
+                    <p style="padding-top: 10px;"><b>Generalizing to different materials:</b>
+                        We showcase the dynamics model's capability to generalize
+                        to various materials by shaping a K without retraining.
+                    </p>
+                </td>
+            </tr>
         </tbody>
     </table>
 
-    <center>
+    <!-- <h2>Generalizing to Different Materials</h2> -->
+    <!-- <table align="center" class="spacing">
+        <tbody>
+            
+        </tbody>
+    </table> -->
+
+    <!-- <center>
         <h2>Paper</h2>
     </center>
     <table align="center">
@@ -374,32 +429,26 @@
             </tr>
         </tbody>
     </table>
-    <br>
+    <br> -->
 
     <hr>
-    <br>
-
+    <h2>Related Works</h2>
     <table align="center" width="1000">
         <tbody>
             <tr>
                 <td>
-                    <h3>Related Work</h3>
-                </td>
-            </tr>
-            <tr>
-                <td>
                     <ol>
+                        <li>
+                            Shi et al. <a href="http://hxu.rocks/robocraft/">"RoboCraft: Learning to See, Simulate, and
+                                Shape Elasto-Plastic Objects with Graph Networks"</a>, in RSS 2022
+                        </li>
                         <li>
                             Li et al. <a href="http://visual-physics-grounding.csail.mit.edu/">"Visual Grounding of
                                 Learned Physical Models"</a>, in ICML 2020
                         </li>
                         <li>
-                            Huang et al. <a href="http://plasticinelab.csail.mit.edu/">"PlasticineLab: A Soft-Body
-                                Manipulation Benchmark with Differentiable Physics"</a>, in ICLR 2021
-                        </li>
-                        <li>Chen et al. <a href="https://arxiv.org/pdf/2107.06924.pdf">"Deformable Elasto-Plastic Object
-                                Shaping using an
-                                Elastic Hand and Model-Based Reinforcement Learning"</a>, in IROS 2021
+                            Li et al. <a href="http://dpi.csail.mit.edu/">"Learning Particle Dynamics
+                                for Manipulating Rigid Bodies, Deformable Objects, and Fluids"</a>, in ICLR 2019
                         </li>
 
                     </ol>
