@@ -80,6 +80,63 @@
             style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
             <tbody>
 
+              <tr onmouseout="robocook_stop()" onmouseover="robocook_start()">
+                <td style="padding: 20px 10px 10px 20px;width:25%;vertical-align:middle">
+                  <div class="one">
+                    <div class="two" id='robocook_image'><video width=100% height=100% muted autoplay loop>
+                        <source src="images/robocook.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video></div>
+                    <img src='images/robocook.jpg' width="200">
+                  </div>
+                  <script type="text/javascript">
+                    function robocook_start() {
+                      document.getElementById('robocook_image').style.opacity = "1";
+                    }
+
+                    function robocook_stop() {
+                      document.getElementById('robocook_image').style.opacity = "0";
+                    }
+                    robocook_stop()
+                  </script>
+                </td>
+                <td style="padding: 20px 20px 10px 10px;width:75%;vertical-align:middle">
+                  <!-- <a href="https://ieeexplore.ieee.org/abstract/document/9561505"> -->
+                  <papertitle>RoboCook: Long-Horizon Elasto-Plastic Object Manipulation with Diverse Tools
+                  </papertitle>
+                  <!-- </a> -->
+                  <br>
+                  <strong>Haochen Shi*</strong>,
+                  <a href="http://hxu.rocks/">Huazhe Xu*</a>,
+                  <a href="https://samuelpclarke.com/">Samuel Clarke</a>,
+                  <a href="https://people.csail.mit.edu/liyunzhu/">Yunzhu Li</a>,
+                  <a href="https://jiajunwu.com/">Jiajun Wu</a>
+                  <br>
+                  <em>Arxiv</em>, 2023
+                  <br>
+                  <a href="https://hshi74.github.io/robocook/">[Website & Video]</a>
+                  <a href="https://arxiv.org/abs/2306.14447">[Paper]</a>
+                  <a href="https://github.com/hshi74/robocook">[Code]</a>
+                  <a
+                    href="https://drive.google.com/drive/folders/1kEw4rnFWnYpkelfucvtJMEYYwA5P_0CK?usp=drive_link">[Data]</a>
+                  <br>
+                  <!-- Covered by
+                  <a href="https://news.mit.edu/2022/robots-play-play-dough-0623">[MIT News]</a>
+                  <a href="https://hai.stanford.edu/news/training-robot-shape-letters-play-doh">[Stanford HAI]</a>
+                  <a
+                    href="https://www.newscientist.com/article/2325970-ai-powered-robot-learned-to-make-letters-out-of-play-doh-on-its-own/">[New
+                    Scientist]</a> -->
+                  <p></p>
+                  <p>
+                    Humans excel in complex long-horizon soft body manipulation tasks via flexible tool use: bread
+                    baking requires a knife to slice the dough and a rolling pin to flatten it. Often regarded as a
+                    hallmark of human cognition, tool use in autonomous robots remains limited due to challenges in
+                    understanding tool-object interactions. Here we develop an intelligent robotic system, RoboCook,
+                    which perceives, models, and manipulates elasto-plastic objects with various tools.
+                  </p>
+                </td>
+              </tr>
+
               <tr onmouseout="robocraft_stop()" onmouseover="robocraft_start()">
                 <td style="padding: 20px 10px 10px 20px;width:25%;vertical-align:middle">
                   <div class="one">
