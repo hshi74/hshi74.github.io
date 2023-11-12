@@ -7,7 +7,7 @@ body {
   background-color: #fff;
   margin: auto;
   padding: 20px;
-  max-width: 60%;
+  max-width: 70%;
 }
 
 section {
@@ -148,7 +148,7 @@ footer {
 
   .profile-photo {
     max-width: 60%;
-    margin: 0 auto;
+    margin: 0;
     order: 2;
   }
 
@@ -162,7 +162,7 @@ footer {
 
   .paper-media {
     max-width: 60%;
-    margin: 0 auto;
+    margin: 0;
   }
 
   .paper-title {
