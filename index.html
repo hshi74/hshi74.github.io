@@ -2,436 +2,209 @@
 <html lang="en">
 
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
+  <meta charset="UTF-8">
   <title>Haochen Shi</title>
-
   <meta name="author" content="Haochen Shi">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
-  <!-- <link rel="icon" type="image/png" href="images/icon.png"> -->
-
-  <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-KVK6EML3WQ"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-
     gtag('config', 'G-KVK6EML3WQ');
   </script>
 </head>
 
-<body style="line-height: 20px">
-  <table
-    style="width:100%;max-width:900px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-    <tbody>
-      <tr style="padding:0px">
-        <td style="padding:0px">
-          <table
-            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-            <tbody>
-              <tr style="padding:0px">
-                <td style="padding:10px;width:67%;vertical-align:middle">
-                  <p style="padding-bottom:10px;text-align:center">
-                    <name>Haochen Shi</name>
-                  </p>
-                  <p>
-                    I'm a first-year Ph.D. student in Computer Science at Stanford University. I worked with <a
-                      href="https://jiajunwu.com/">Jiajun Wu</a>, <a href="http://hxu.rocks/">Huazhe Xu</a>,
-                    <a href="https://yunzhuli.github.io/">Yunzhu Li</a>
-                    on robotics and computer vision during my Master's at Stanford and
-                    <a href="https://gleicher.sites.cs.wisc.edu/">Michael Gleicher</a> and
-                    <a href="https://dannyrakita.net/">Danny Rakita</a> on robotics during my
-                    undergraduate at UW-Madison.
-                  </p>
-                  <p>
-                    I'm interested in challenging robotic manipulation tasks.
-                    In my leisure time, I love playing tennis, Go, chess, and mahjong.
-                  </p>
-                  <p style="text-align:center">
-                    <a href="mailto:hshi74@stanford.edu">Email</a> &nbsp/&nbsp
-                    <!-- <a href="data/JonBarron-CV.pdf">CV</a> &nbsp/&nbsp -->
-                    <!-- <a href="data/JonBarron-bio.txt">Bio</a> &nbsp/&nbsp -->
-                    <a href="https://scholar.google.com/citations?hl=en&user=gr51Y7UAAAAJ">Google Scholar</a>
-                    &nbsp/&nbsp
-                    <a href="https://twitter.com/HaochenShi74">Twitter</a> &nbsp/&nbsp
-                    <a href="https://github.com/hshi74">Github</a>
-                  </p>
-                </td>
-                <td style="padding:10px;width:33%;max-width:33%">
-                  <a href="images/me.jpeg"><img style="width:200px" alt="profile photo" src="images/me.jpeg"
-                      class="hoverZoomLink"></a>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <table
-            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-            <tbody>
-              <tr>
-                <td style="padding:10px 10px 0px;width:100%;vertical-align:middle">
-                  <heading>Research</heading>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <table
-            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-            <tbody>
+<body>
+  <section class="introduction">
+    <div class="bio">
+      <h2 class="name">Haochen Shi</h2>
+      <p>
+        I'm a first-year Ph.D. student in Computer Science at Stanford University. I worked with <a
+          href="https://jiajunwu.com/">Jiajun Wu</a>, <a href="http://hxu.rocks/">Huazhe Xu</a>,
+        <a href="https://yunzhuli.github.io/">Yunzhu Li</a>
+        on robotics and computer vision during my Master's at Stanford and
+        <a href="https://gleicher.sites.cs.wisc.edu/">Michael Gleicher</a> and
+        <a href="https://dannyrakita.net/">Danny Rakita</a> on robotics during my
+        undergraduate at UW-Madison.
+      </p>
+      <p>
+        I'm interested in challenging robotic manipulation tasks.
+        In my leisure time, I love playing tennis, Go, chess, and mahjong.
+      </p>
+      <p style="text-align:center">
+        <a href="mailto:hshi74@stanford.edu">Email</a> &nbsp/&nbsp
+        <a href="https://scholar.google.com/citations?hl=en&user=gr51Y7UAAAAJ">Google Scholar</a>
+        &nbsp/&nbsp
+        <a href="https://twitter.com/HaochenShi74">Twitter</a> &nbsp/&nbsp
+        <a href="https://github.com/hshi74">Github</a>
+      </p>
+    </div>
+    <img class="profile-photo" src="images/me.jpeg" alt="Haochen Shi">
+  </section>
 
-              <tr onmouseout="robocook_stop()" onmouseover="robocook_start()">
-                <td style="padding: 20px 10px 10px 20px;width:25%;vertical-align:middle">
-                  <div class="one">
-                    <div class="two" id='robocook_image'><video width=100% height=100% muted autoplay loop>
-                        <source src="images/robocook.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                      </video></div>
-                    <img src='images/robocook.jpg' width="200">
-                  </div>
-                  <script type="text/javascript">
-                    function robocook_start() {
-                      document.getElementById('robocook_image').style.opacity = "1";
-                    }
+  <section class="research">
+    <h2>Research</h2>
 
-                    function robocook_stop() {
-                      document.getElementById('robocook_image').style.opacity = "0";
-                    }
-                    robocook_stop()
-                  </script>
-                </td>
-                <td style="padding: 20px 20px 10px 10px;width:75%;vertical-align:middle">
-                  <!-- <a href="https://ieeexplore.ieee.org/abstract/document/9561505"> -->
-                  <papertitle>RoboCook: Long-Horizon Elasto-Plastic Object Manipulation with Diverse Tools
-                  </papertitle>
-                  <!-- </a> -->
-                  <br>
-                  <strong>Haochen Shi*</strong>,
-                  <a href="http://hxu.rocks/">Huazhe Xu*</a>,
-                  <a href="https://samuelpclarke.com/">Samuel Clarke</a>,
-                  <a href="https://yunzhuli.github.io/">Yunzhu Li</a>,
-                  <a href="https://jiajunwu.com/">Jiajun Wu</a>
-                  <br>
-                  <em>CoRL</em>, 2023
-                  <br>
-                  <b style="color: red;">Best System Paper</b>
-                  <br>
-                  <a href="https://hshi74.github.io/robocook/">[Website & Video]</a>
-                  <a href="https://arxiv.org/abs/2306.14447">[Paper]</a>
-                  <a href="https://github.com/hshi74/robocook">[Code]</a>
-                  <a
-                    href="https://drive.google.com/drive/folders/1kEw4rnFWnYpkelfucvtJMEYYwA5P_0CK?usp=drive_link">[Data]</a>
-                  <br>
-                  <!-- Covered by
-                  <a href="https://news.mit.edu/2022/robots-play-play-dough-0623">[MIT News]</a>
-                  <a href="https://hai.stanford.edu/news/training-robot-shape-letters-play-doh">[Stanford HAI]</a>
-                  <a
-                    href="https://www.newscientist.com/article/2325970-ai-powered-robot-learned-to-make-letters-out-of-play-doh-on-its-own/">[New
-                    Scientist]</a> -->
-                  <p></p>
-                  <p>
-                    Humans excel in complex long-horizon soft body manipulation tasks via flexible tool use: bread
-                    baking requires a knife to slice the dough and a rolling pin to flatten it. Often regarded as a
-                    hallmark of human cognition, tool use in autonomous robots remains limited due to challenges in
-                    understanding tool-object interactions. Here we develop an intelligent robotic system, RoboCook,
-                    which perceives, models, and manipulates elasto-plastic objects with various tools.
-                  </p>
-                </td>
-              </tr>
+    <article class="paper">
+      <div class="paper-media">
+        <video class="paper-video" width="100%" height="100%" muted autoplay loop>
+          <source src="images/robocook.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="paper-content">
+        <b class="paper-title">RoboCook: Long-Horizon Elasto-Plastic Object Manipulation with Diverse Tools</b>
+        <p class="paper-authors">
+          <b>Haochen Shi*</b>,
+          <a href="http://hxu.rocks/">Huazhe Xu*</a>,
+          <a href="https://samuelpclarke.com/">Samuel Clarke</a>,
+          <a href="https://yunzhuli.github.io/">Yunzhu Li</a>,
+          <a href="https://jiajunwu.com/">Jiajun Wu</a>
+        </p>
+        <p class="paper-details"><em>CoRL</em>, 2023</p>
+        <b class="paper-award">Best System Paper</b>
+        <div class="paper-links">
+          <a href="https://github.com/hshi74/robocook">[Project Page]</a>
+          <a href="https://hshi74.github.io/robocook">[Paper]</a>
+          <a href="https://arxiv.org/abs/2306.14447">[Code]</a>
+        </div>
+        <p class="paper-description">Humans excel in complex long-horizon soft body manipulation tasks via flexible tool
+          use: bread baking requires a knife to slice the dough and a rolling pin to flatten it. Often regarded as a
+          hallmark of human cognition, tool use in autonomous robots remains limited due to challenges in
+          understanding tool-object interactions. Here we develop an intelligent robotic system, RoboCook,
+          which perceives, models, and manipulates elasto-plastic objects with various tools.
+        </p>
+    </article>
 
+    <article class="paper">
+      <div class="paper-media">
+        <video class="paper-video" width="100%" height="100%" muted autoplay loop>
+          <source src="images/rtx.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="paper-content">
+        <b class="paper-title">Open X-Embodiment: Robotic Learning Datasets and RT-X Models</b>
+        <p class="paper-authors">
+          <a href="https://robotics-transformer-x.github.io/">Open X-Embodiment Collaboration</a>
+        </p>
+        <p class="paper-details"><em>preprint</em>, 2023</p>
+        <div class="paper-links">
+          <a href="https://robotics-transformer-x.github.io">[Project Page]</a>
+          <a href="https://robotics-transformer-x.github.io/paper.pdf">[Paper]</a>
+        </div>
+        <p class="paper-description">Large, high-capacity models trained on diverse datasets have shown remarkable
+          successes on efficiently tackling downstream applications. In domains from NLP to Computer Vision,
+          this has led to a consolidation of pretrained models, with general pretrained backbones
+          serving as a starting point for many applications.
+          Can such a consolidation happen in robotics?
+        </p>
+    </article>
 
-              <tr onmouseout="rtx_stop()" onmouseover="rtx_start()">
-                <td style="padding: 20px 10px 10px 20px;width:25%;vertical-align:middle">
-                  <div class="one">
-                    <div class="two" id='rtx_image'><video width=100% height=100% muted autoplay loop>
-                        <source src="images/rtx.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                      </video></div>
-                    <img src='images/rtx.jpg' width="200">
-                  </div>
-                  <script type="text/javascript">
-                    function rtx_start() {
-                      document.getElementById('rtx_image').style.opacity = "1";
-                    }
+    <article class="paper">
+      <div class="paper-media">
+        <video class="paper-video" width="100%" height="100%" muted autoplay loop>
+          <source src="images/robocraft.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="paper-content">
+        <b class="paper-title">RoboCraft: Learning to See, Simulate, and Shape Elasto-Plastic Objects with Graph
+          Networks</b>
+        <p class="paper-authors">
+          <b>Haochen Shi*</b>,
+          <a href="http://hxu.rocks/">Huazhe Xu*</a>,
+          <a href="https://sites.google.com/view/zhiao-huang/">Zhiao Huang</a>,
+          <a href="https://yunzhuli.github.io/">Yunzhu Li</a>,
+          <a href="https://jiajunwu.com/">Jiajun Wu</a>
+        </p>
+        <p class="paper-details"><em>RSS</em>, 2022</p>
+        <p class="paper-details">Abridged in ICRA 2022 workshop on Representing and Manipulating Deformable Objects</p>
+        <div class="paper-links">
+          <a href="http://hxu.rocks/robocraft">[Project Page]</a>
+          <a href="https://arxiv.org/abs/2205.02909">[Paper]</a>
+          <a href="https://github.com/hshi74/RoboCraft">[Code]</a>
+        </div>
+        <p class="paper-details">
+          Covered by
+          <a href="https://news.mit.edu/2022/robots-play-play-dough-0623">[MIT News]</a>
+          <a href="https://hai.stanford.edu/news/training-robot-shape-letters-play-doh">[Stanford HAI]</a>
+          <a
+            href="https://www.newscientist.com/article/2325970-ai-powered-robot-learned-to-make-letters-out-of-play-doh-on-its-own/">[New
+            Scientist]</a>
+        </p>
+        <p class="paper-description">Modeling and manipulating elasto-plastic objects are essential capabilities
+          for robots to perform complex industrial and household interaction tasks. However, significant
+          challenges exist in virtually every aspect of the robotic manipulation pipeline,
+          e.g., representing the states, modeling the dynamics, and synthesizing
+          the control signals. We propose to tackle these challenges by employing a
+          particle-based representation for elasto-plastic objects in a model-based planning framework.
+        </p>
+    </article>
 
-                    function rtx_stop() {
-                      document.getElementById('rtx_image').style.opacity = "0";
-                    }
-                    rtx_stop()
-                  </script>
-                </td>
-                <td style="padding: 20px 20px 10px 10px;width:75%;vertical-align:middle">
-                  <papertitle>Open X-Embodiment: Robotic Learning Datasets and RT-X Models
-                  </papertitle>
-                  <!-- </a> -->
-                  <br>
-                  <a href="https://robotics-transformer-x.github.io/">Open X-Embodiment Collaboration</a>
-                  <br>
-                  <em>preprint</em>, 2023
-                  <br>
-                  <a href="https://robotics-transformer-x.github.io/">[Website]</a>
-                  <a href="https://robotics-transformer-x.github.io/paper.pdf">[Paper]</a>
-                  <br>
-                  <p></p>
-                  <p>
-                    Large, high-capacity models trained on diverse datasets have shown remarkable successes on
-                    efficiently tackling downstream applications. In domains from NLP to Computer Vision,
-                    this has led to a consolidation of pretrained models, with general pretrained backbones
-                    serving as a starting point for many applications.
-                    Can such a consolidation happen in robotics?
-                  </p>
-                </td>
-              </tr>
+    <article class="paper">
+      <div class="paper-media">
+        <video class="paper-video" width="100%" height="100%" muted autoplay loop>
+          <source src="images/cik.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="paper-content">
+        <b class="paper-title">CollisionIK: A per-instant pose optimization method for generating robot motions with
+          environment collision avoidance</b>
+        <p class="paper-authors">
+          <a href="https://pages.cs.wisc.edu/~rakita/">Daniel Rakita</a>,
+          <b>Haochen Shi*</b>,
+          <a href="http://bilgemutlu.com/">Bilge Mutlu</a>,
+          <a href="https://gleicher.sites.cs.wisc.edu/">Michael Gleicher</a>
+        </p>
+        <p class="paper-details"><em>ICRA</em>, 2021</p>
+        <div class="paper-links">
+          <a href="https://arxiv.org/abs/2102.13187">[Paper]</a>
+          <a href="https://github.com/uwgraphics/relaxed_ik_core">[Code]</a>
+          <a href="https://youtu.be/rdMl1gOPNoM">[Talk]</a>
+        </div>
+        <p class="paper-description">In this work, we present a per-instant pose optimization method that can generate
+          configurations that achieve specified pose or motion objectives as best as possible over a sequence of
+          solutions, while also simultaneously avoiding collisions with static or dynamic obstacles in the environment.
+        </p>
+    </article>
+  </section>
 
-              <tr onmouseout="robocraft_stop()" onmouseover="robocraft_start()">
-                <td style="padding: 20px 10px 10px 20px;width:25%;vertical-align:middle">
-                  <div class="one">
-                    <div class="two" id='robocraft_image'><video width=100% height=100% muted autoplay loop>
-                        <source src="images/robocraft.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                      </video></div>
-                    <img src='images/robocraft.jpg' width="200">
-                  </div>
-                  <script type="text/javascript">
-                    function robocraft_start() {
-                      document.getElementById('robocraft_image').style.opacity = "1";
-                    }
+  <section class="teaching">
+    <h2>Teaching</h2>
+    <ul>
+      <li>Teaching Assistant, <a href="http://cs231n.stanford.edu/">Stanford CS 231N</a>, Spring 2023</li>
+      <li>Teaching Assistant, <a href="http://cs231n.stanford.edu/">Stanford CS 231N</a>, Spring 2022</li>
+      <li>Teaching Assistant, <a href="https://web.stanford.edu/class/cs109/">Stanford CS 109</a>, Winter
+        2022</li>
+      <li>Teaching Assistant, <a href="https://web.stanford.edu/class/cs109/">Stanford CS 109</a>, Fall
+        2021</li>
+      <li>Peer Mentor, <a href="https://graphics.cs.wisc.edu/Courses/559-sp2020/">UW-Madison CS 559</a>,
+        Spring 2020</li>
+    </ul>
+  </section>
 
-                    function robocraft_stop() {
-                      document.getElementById('robocraft_image').style.opacity = "0";
-                    }
-                    robocraft_stop()
-                  </script>
-                </td>
-                <td style="padding: 20px 20px 10px 10px;width:75%;vertical-align:middle">
-                  <!-- <a href="https://ieeexplore.ieee.org/abstract/document/9561505"> -->
-                  <papertitle>RoboCraft: Learning to See, Simulate, and Shape Elasto-Plastic Objects with Graph Networks
-                  </papertitle>
-                  <!-- </a> -->
-                  <br>
-                  <strong>Haochen Shi*</strong>,
-                  <a href="http://hxu.rocks/">Huazhe Xu*</a>,
-                  <a href="https://sites.google.com/view/zhiao-huang/">Zhiao Huang</a>,
-                  <a href="https://yunzhuli.github.io/">Yunzhu Li</a>,
-                  <a href="https://jiajunwu.com/">Jiajun Wu</a>
-                  <br>
-                  <em>RSS</em>, 2022
-                  <br>
-                  Abridged in ICRA 2022 workshop on Representing and Manipulating Deformable Objects
-                  <br>
-                  <a href="http://hxu.rocks/robocraft/">[Website & Video]</a>
-                  <a href="https://arxiv.org/abs/2205.02909">[Paper]</a>
-                  <a href="https://github.com/hshi74/RoboCraft">[Code]</a>
-                  <br>
-                  Covered by
-                  <a href="https://news.mit.edu/2022/robots-play-play-dough-0623">[MIT News]</a>
-                  <a href="https://hai.stanford.edu/news/training-robot-shape-letters-play-doh">[Stanford HAI]</a>
-                  <a
-                    href="https://www.newscientist.com/article/2325970-ai-powered-robot-learned-to-make-letters-out-of-play-doh-on-its-own/">[New
-                    Scientist]</a>
-                  <p></p>
-                  <p>
-                    Modeling and manipulating elasto-plastic objects are essential capabilities
-                    for robots to perform complex industrial and household interaction tasks. However, significant
-                    challenges exist in virtually every aspect of the robotic manipulation pipeline,
-                    e.g., representing the states, modeling the dynamics, and synthesizing
-                    the control signals. We propose to tackle these challenges by employing a
-                    particle-based representation for elasto-plastic objects in a model-based planning framework.
-                  </p>
-                </td>
-              </tr>
+  <section class="talks">
+    <h2>Talks</h2>
+    <ul>
+      <li>[2023/5/28] Invited Talk at Tsinghua University</li>
+    </ul>
+  </section>
 
-              <tr onmouseout="cik_stop()" onmouseover="cik_start()">
-                <td style="padding: 20px 10px 20px 20px;width:25%;vertical-align:middle">
-                  <div class="one">
-                    <div class="two" id='cik_image'><video width=100% height=100% muted autoplay loop>
-                        <source src="images/cik.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                      </video></div>
-                    <img src='images/cik.jpg' width="200">
-                  </div>
-                  <script type="text/javascript">
-                    function cik_start() {
-                      document.getElementById('cik_image').style.opacity = "1";
-                    }
+  <section class="service">
+    <h2>Service</h2>
+    <ul>
+      <li>Conference Reviewer: IROS, CoRL</li>
+    </ul>
+  </section>
 
-                    function cik_stop() {
-                      document.getElementById('cik_image').style.opacity = "0";
-                    }
-                    cik_stop()
-                  </script>
-                </td>
-                <td style="padding: 20px 20px 20px 10px;width:75%;vertical-align:middle">
-                  <!-- <a href="https://ieeexplore.ieee.org/abstract/document/9561505"> -->
-                  <papertitle>CollisionIK: A per-instant pose optimization method for generating robot motions with
-                    environment collision avoidance</papertitle>
-                  <!-- </a> -->
-                  <br>
-                  <a href="https://pages.cs.wisc.edu/~rakita/">Daniel Rakita</a>,
-                  <strong>Haochen Shi</strong>,
-                  <a href="http://bilgemutlu.com/">Bilge Mutlu</a>,
-                  <a href="https://gleicher.sites.cs.wisc.edu/">Michael Gleicher</a>
-                  <br>
-                  <em>ICRA</em>, 2021
-                  <br>
-                  <!-- <a href="http://jonbarron.info/mipnerf360">[project page]</a> -->
-                  <a href="https://youtu.be/rdMl1gOPNoM">[Video]</a>
-                  <a href="https://arxiv.org/abs/2102.13187">[Paper]</a>
-                  <a href="https://github.com/uwgraphics/relaxed_ik_core">[Code]</a>
-                  <p></p>
-                  <p>
-                    In this work, we present a per-instant pose optimization method that can generate configurations
-                    that
-                    achieve specified pose or motion objectives as best as possible over a sequence of solutions,
-                    while also simultaneously avoiding collisions with static or dynamic obstacles in the environment.
-                  </p>
-                </td>
-              </tr>
+  <footer>
+    <p>Template from <a href="https://jonbarron.info/">Jon Barron's website</a></p>
+  </footer>
 
-              <!-- <tr onmouseout="urf_stop()" onmouseover="urf_start()">
-            <td style="padding:20px;width:25%;vertical-align:middle">
-              <div class="one">
-                <div class="two" id='urf_image'><video  width=100% height=100% muted autoplay loop>
-                <source src="images/urf.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-                </video></div>
-                <img src='images/urf.jpg' width="200">
-              </div>
-              <script type="text/javascript">
-                function urf_start() {
-                  document.getElementById('urf_image').style.opacity = "1";
-                }
-
-                function urf_stop() {
-                  document.getElementById('urf_image').style.opacity = "0";
-                }
-                urf_stop()
-              </script>
-            </td>
-            <td style="padding:20px;width:75%;vertical-align:middle">
-              <a href="https://urban-radiance-fields.github.io/">
-                <papertitle>Urban Radiance Fields</papertitle>
-              </a>
-              <br>
-							<a href="http://www.krematas.com/">Konstantinos Rematas</a>,
-							<a href="https://andrewhliu.github.io/">Andrew Liu</a>,
-							<a href="https://pratulsrinivasan.github.io/">Pratul P. Srinivasan</a>,
-							<strong>Jonathan T. Barron</strong>, <br>
-							<a href="https://taiya.github.io/">Andrea Tagliasacchi</a>,
-							<a href="https://www.cs.princeton.edu/~funk/">Tom Funkhouser</a>,
-							<a href="https://sites.google.com/corp/view/vittoferrari"> Vittorio Ferrari</a>
-              <br>
-							<em>arXiv</em>, 2021
-              <br>
-              <a href="https://urban-radiance-fields.github.io/">project page</a>
-              /
-              <a href="https://arxiv.org/abs/2111.14643">arXiv</a>
-              /
-              <a href="https://www.youtube.com/watch?v=qGlq5DZT6uc">video</a>
-              <p></p>
-              <p>
-								Incorporating lidar and explicitly modeling the sky lets you reconstruct urban environments.</p>
-            </td>
-          </tr>  -->
-            </tbody>
-          </table>
-
-          <table
-            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-            <tbody>
-              <tr>
-                <td style="padding:10px 10px 0px;width:100%;vertical-align:middle">
-                  <heading>Teaching</heading>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-
-          <table
-            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-            <tbody>
-              <tr>
-                <td>
-                  <ul>
-                    <li>Teaching Assistant, <a href="http://cs231n.stanford.edu/">Stanford CS 231N</a>, Spring 2023</li>
-                    <li>Teaching Assistant, <a href="http://cs231n.stanford.edu/">Stanford CS 231N</a>, Spring 2022</li>
-                    <li>Teaching Assistant, <a href="https://web.stanford.edu/class/cs109/">Stanford CS 109</a>, Winter
-                      2022</li>
-                    <li>Teaching Assistant, <a href="https://web.stanford.edu/class/cs109/">Stanford CS 109</a>, Fall
-                      2021</li>
-                    <li>Peer Mentor, <a href="https://graphics.cs.wisc.edu/Courses/559-sp2020/">UW-Madison CS 559</a>,
-                      Spring 2020</li>
-                  </ul>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-
-          <table
-            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-            <tbody>
-              <tr>
-                <td style="padding:10px 10px 0px;width:100%;vertical-align:middle">
-                  <heading>Talks</heading>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-
-          <table
-            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-            <tbody>
-              <tr>
-                <td>
-                  <ul>
-                    <li>[2023/5/28] Invited Talk at <b>Tsinghua University</b></li>
-                  </ul>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-
-          <table
-            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-            <tbody>
-              <tr>
-                <td style="padding:10px 10px 0px;width:100%;vertical-align:middle">
-                  <heading>Service</heading>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-
-          <table
-            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-            <tbody>
-              <tr>
-                <td>
-                  <ul>
-                    <li>Conference Reviewer: IROS, CoRL</b></li>
-                  </ul>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-
-          <table
-            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-            <tbody>
-              <tr>
-                <td style="padding:0px">
-                  <br>
-                  <p style="text-align:right;font-size:small;">
-                    Template from <a href="https://jonbarron.info/">Jon Barron's website</a>
-                  </p>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </td>
-      </tr>
-  </table>
 </body>
 
 </html>
