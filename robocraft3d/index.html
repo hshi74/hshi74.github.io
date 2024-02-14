@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+    content="RoboCraft: Learning to see, simulate, and shape elasto-plastic objects in 3D with graph networks.">
+  <meta name="keywords" content="Deformable Manipulation, Robot Learning, Dynamics Model">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RoboCraft: Learning to See, Simulate, and Shape Elasto-plastic Objects in 3D with Graph Networks</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+
+<body>
+
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+        <a class="navbar-item" href="https://hshi74.github.io">
+          <span class="icon">
+            <i class="fas fa-home"></i>
+          </span>
+        </a>
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            More Research
+          </a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="http://hxu.rocks/robocraft/">
+              RoboCraft
+            </a>
+            <a class="navbar-item" href="https://hshi74.github.io/robocook/">
+              RoboCook
+            </a>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">RoboCraft: Learning to See, Simulate, and Shape Elasto-plastic
+              Objects in 3D with Graph Networks</h1>
+            <div class="is-size-5 publication-authors">
+              Published in the <i>International Journal of Robotics Research (IJRR)</i>
+            </div>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://hshi74.github.io">Haochen Shi</a><sup>1*</sup>,</span>
+              <span class="author-block">
+                <a href="https://hxu.rocks/">Huazhe Xu</a><sup>1*†</sup>,</span>
+              <span class="author-block">
+                <a href="https://sites.google.com/view/zhiao-huang">Zhiao Huang</a><sup>2</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://people.csail.mit.edu/liyunzhu/">Yunzhu Li</a><sup>1,3</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://jiajunwu.com/">Jiajun Wu</a><sup>1</sup>,
+              </span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>Stanford University,</span>
+              <span class="author-block"><sup>2</sup>University of California San Diego,</span>
+              <span class="author-block"><sup>3</sup>University of Illinois Urbana-Champaign,</span>
+              <span class="author-block"><sup>*</sup>Equal contribution,</span>
+              <span class="author-block"><sup>†</sup>Now at Tsinghua University</span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a href="https://doi.org/10.1177/02783649231219020"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://doi.org/10.1177/02783649231219020"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+                <!-- Video Link. -->
+                <span class="link-block">
+                  <a href="https://youtu.be/o2LPhcZRtSo" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                    </span>
+                    <span>Video</span>
+                  </a>
+                </span>
+                <!-- Code Link. -->
+                <span class="link-block">
+                  <a href="https://github.com/hshi74/robocraft3d"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+                <!-- Dataset Link. -->
+                <!-- <span class="link-block">
+                  <a href="https://github.com/google/nerfies/releases/tag/0.1"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="far fa-images"></i>
+                    </span>
+                    <span>Data</span>
+                  </a> -->
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <video id="teaser" autoplay muted loop playsinline height="100%">
+          <source src="./static/videos/teaser.mp4" type="video/mp4">
+        </video>
+        <h2 class="subtitle has-text-centered">
+          RoboCraft shapes elasto-plastic objects into various 3D target shapes in the real
+          world.
+        </h2>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- <section class="hero is-light is-small">
+    <div class="hero-body">
+      <div class="container">
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item item-steve">
+            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/steve.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-chair-tp">
+            <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/chair-tp.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-shiba">
+            <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/shiba.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-fullbody">
+            <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/fullbody.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-blueshirt">
+            <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/blueshirt.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-mask">
+            <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/mask.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-coffee">
+            <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/coffee.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-toby">
+            <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/toby2.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Modeling and manipulating elasto-plastic objects are essential capabilities for robots to perform complex
+              industrial and household interaction tasks (e.g., stuffing dumplings, rolling sushi, and making pottery).
+              However, due to the high degrees of freedom of elasto-plastic objects, significant challenges exist in
+              virtually every aspect of the robotic manipulation pipeline, for example, representing the states,
+              modeling the dynamics, and synthesizing the control signals. We propose to tackle these challenges by
+              employing a particle-based representation for elasto-plastic objects in a model-based planning framework.
+              Our system, RoboCraft, only assumes access to raw RGBD visual observations. It transforms the sensory data
+              into particles and learns a particle-based dynamics model using graph neural networks (GNNs) to capture
+              the structure of the underlying system. The learned model can then be coupled with model predictive
+              control (MPC) algorithms to plan the robot's behavior. We show through experiments that with just 10 min
+              of real-world robot interaction data, our robot can learn a dynamics model that can be used to synthesize
+              control signals to deform elasto-plastic objects into various complex target shapes, including shapes that
+              the robot has never encountered before. We perform systematic evaluations in both simulation and the real
+              world to demonstrate the robot's manipulation capabilities.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/ Abstract. -->
+
+      <!-- Paper video. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Video</h2>
+          <div class="publication-video">
+            <iframe src="https://www.youtube.com/embed/o2LPhcZRtSo?rel=0&amp;showinfo=0" frameborder="0"
+              allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+      <!--/ Paper video. -->
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Method</h2>
+
+          <h3 class="title is-4">Perception</h3>
+          <div class="content has-text-justified">
+            <p>
+              We use four calibrated Intel RealSense D415 cameras to capture a complete point
+              cloud of the robot’s workspace. From the raw point cloud, our algorithm (a) crops to the region where the
+              plasticine and the tool reside, (b) extracts the point cloud of the plasticine by color segmentation, (c)
+              reconstructs a watertight mesh around the point cloud with Poisson surface reconstruction method, (d) uses
+              SDF (Signed Distance Function) of the watertight mesh to sample points inside the mesh, (e) removes points
+              lying within the SDF of the tools, (f) does alpha-shape surface reconstruction and uniformly
+              samples 300 points on the reconstructed surface with Poisson disk sampling method.
+            </p>
+          </div>
+          <div class="content has-text-centered">
+            <div class="column">
+              <img src="./static/images/perception.png" alt="The perception module of RoboCraft." />
+            </div>
+          </div>
+          <br />
+
+          <h3 class="title is-4">Dyanmics</h3>
+          <div class="content has-text-justified">
+            <p>
+              Our GNN-based dynamics model accurately predicts the change of the plasticine's state in a long-horizon
+              gripping task. We show three examples from the top, front, and perspective views.
+              We compare the prediction of our dynamics model with the ground truth acquired from the perception module
+              to show our model’s accuracy. The blue dots represent the plasticine particles, and the red dots represent
+              the tool particles.
+            </p>
+          </div>
+          <div class="content has-text-centered">
+            <div class="column">
+              <img src="./static/images/dynamics.png" alt="The dynamics module of RoboCraft." />
+            </div>
+          </div>
+
+          <h3 class="title is-4">Planning</h3>
+          <div class="content has-text-justified">
+            <p>
+              We use a combination of sampling- and gradient-based trajectory optimization
+              techniques to solve the planning problem. We first do grid sampling in the simplified action space and
+              then forward the trained GNN-based dynamics model with the initial state of the plasticine and the sampled
+              actions as input. After we obtain the final state of the plasticine after applying the actions, we compute
+              the Chamfer distance between them and the target state. Next, we apply gradient-based trajectory
+              optimization on the lowest-cost trajectory to improve the solution further. The red dots and arrows
+              represent the motion of the parallel two-finger gripper.
+            </p>
+          </div>
+          <div class="content has-text-centered">
+            <div class="column">
+              <img src="./static/images/planning.png" alt="The planning module of RoboCraft." />
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Setup</h2>
+          <div class="content has-text-justified">
+            <p>
+              (a) An overview of the robot workspace. The dashed black circles show the four RGBD Intel RealSense
+              D415 cameras mounted at the four corners of the robot table. The red cubic contour denotes the robot's
+              manipulation area. (b) We illustrate the xyz coordinate system in the robot frame and the simplified
+              action space of the gripping task. (c) The 3D-printed parallel two-finger gripper that the robot uses to
+              pinch the plasticine. (d) Since some end effector poses are close to the robot’s
+              kinematic limits, we designed a rotating object stand to place the plasticine so that the robot can rotate
+              the stand instead of rotating its hand on the z-axis. (e) The robot can rotate the object stand through
+              three steps: (1) insert the gripper into the cavities on two sides of the gripper; (2) rotate the stand
+              along with the plasticine; (3) open two fingers to release the stand. Then, the robot can start gripping.
+            </p>
+          </div>
+          <div class="content has-text-centered">
+            <div class="column">
+              <img src="./static/images/setup.png" alt="The robot setup." />
+            </div>
+          </div>
+          <br />
+        </div>
+      </div>
+
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Manipulation Results on a Real Robot</h2>
+          <div class="content has-text-justified">
+            <p>
+              On the left are the manipulation steps of the alphabet letters 'R,' 'T,' 'X,' 'A,' an
+              hourglass, a 3D 'X,' a stamp, and a pagoda. We use black arrows to illustrate the rotation of the object
+              stand and the motion of the obot gripper. The numbers at the top left corner of the images denote the i-th
+              grip, and images that belong to the same grip are placed inside the same black contour. The sixth column
+              shows the final result. On the right are the corresponding target point clouds acquired from expert human
+              demonstrations using the same robot gripper to pinch the target. The last column shows the
+              targets' visualizations in the real world. Note that these images do not supervise our proposed method but
+              merely illustrate the targets we attempt to achieve.
+            </p>
+          </div>
+          <div class="content has-text-centered">
+            <div class="column">
+              <img src="./static/images/results.png" alt="Results in the real world." />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@article{shi2023robocraft,
+    title=RoboCraft: Learning to See, Simulate, and Shape Elasto-Plastic Objects in 3D with Graph Networks,
+    author={Shi, Haochen and Xu, Huazhe and Huang, Zhiao and Li, Yunzhu and Wu, Jiajun},
+    year={2023},
+    journal={The International Journal of Robotics Research},
+}</code></pre>
+    </div>
+  </section>
+
+
+  <footer class="footer">
+    <div class="container">
+      <!-- <div class="content has-text-centered">
+        <a class="icon-link" href="./static/videos/nerfies_paper.pdf">
+          <i class="fas fa-file-pdf"></i>
+        </a>
+        <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+          <i class="fab fa-github"></i>
+        </a>
+      </div> -->
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content has-text-centered">
+            <!-- <p>
+              This website is licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+            <p>
+              This means you are free to borrow the <a href="https://github.com/nerfies/nerfies.github.io">source
+                code</a> of this website,
+              we just ask that you link back to this page in the footer.
+              Please remember to remove the analytics code included in the header of the website which
+              you do not want on your website.
+            </p>
+          </div> -->
+            <p>
+              Website template by <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+  </footer>
+
+</body>
+
+</html>
