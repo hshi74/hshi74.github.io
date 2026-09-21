@@ -111,6 +111,11 @@ a:hover {
   margin: 0;
 }
 
+.paper-authors b {
+  color: #000;
+  font-weight: 700;
+}
+
 .paper-details {
   margin: 0;
 }
