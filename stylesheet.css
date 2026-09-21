@@ -48,6 +48,15 @@ a:hover {
   text-align: center;
 }
 
+.github-stars {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.github-stars img {
+  display: block;
+}
+
 
 .introduction {
   display: flex;
@@ -89,6 +98,8 @@ a:hover {
 
 .paper-content {
   flex: 1;
+  min-width: 0;
+  overflow-wrap: anywhere;
   padding: 10px;
 }
 
@@ -161,7 +172,8 @@ footer {
   }
 
   .paper-media {
-    max-width: 60%;
+    box-sizing: border-box;
+    max-width: 360px;
     margin: 0;
   }
 
@@ -175,5 +187,7 @@ footer {
 
   .paper-links a {
     font-size: 16px;
+    display: inline-block;
+    padding: 4px 0;
   }
 }
